@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create new player</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1><center> Player Creator Menu </center></h1>
+      <p><center> Create Player Below: </center></p>
+    </div>
+  </div>
+
+  <form>
+
+    <div class="form-group">
+
+      <label for="playerName" class="col-sm-2 col-form-label">Player Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="playerName" value="">
+      </div>
+
+
+      <label for="difficultySelection" class="col-sm-2 col-form-label">Difficulty</label>
+      <div class="col-sm-10">
+        <select class="custom-select my-1 mr-sm-2" id="difficultySelection">
+          <option selected value="0">Choose...</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+          <option value="Impossible">Impossible</option>
+        </select>
+      </div>
+    </div>
+
+  </form>
+
+  <center>
+    <button type="button" onclick="createPlayer()" class="btn btn-primary">Create Player</button type="button" class="btn btn-primary">
+  </center>
+<script src="js/new_game.js"></script>
+</body>
+</html>

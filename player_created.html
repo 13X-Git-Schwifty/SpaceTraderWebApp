@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Player Created!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</head>
+<body onload="playerCreated()">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1><center> Player Created!</center></h1>
+    <h2><center> See your players details below </center></h2>
+  </div>
+</div>
+<div class="col-sm-10">
+    <p>Player Name: <span id="name"></span></p>
+    <p>Credits: 1000</p>
+    <p> Difficulty: <span id="diff"></span></p>
+</div>
+<center>
+        <button type="button" onclick="location.href='planet_list.html';"class="btn btn-primary">CONTINUE</button type="button" class="btn btn-primary">
+    </center>
+<script src="js/player_created.js"></script>
+</body>
