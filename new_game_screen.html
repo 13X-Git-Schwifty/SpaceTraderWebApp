@@ -12,12 +12,12 @@
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1><center> Player Creator Menu </center></h1>
-      <p><center> Create Player Below: </center></p>
+      <h1><center> New Player </center></h1>
+      <p><center> Enter details </center></p>
     </div>
   </div>
 
-  <form>
+  <form name = newP>
 
     <div class="form-group">
 
@@ -40,10 +40,35 @@
       </div>
     </div>
 
+      <label for="skillSelection" class="col-sm-2 col-form-label">Skill Level Distribution</label>
+      <div class="col-sm-10">
+         <p> Pilot <input type="number" name="pilot" id="pilot"> </p>
+         <p> Fighter <input type="number" name="fighter" id="fighter"> </p>
+         <p> Trader <input type="number" name="trader" id="trader"> </p>
+         <p> Engineer <input type="number" name="engineer" id="engineer" onchange="calculate();"> </p>
+         <p> Testing: <input type="text" name="output" id="output">
+      </div>
+    </div>
+
   </form>
 
+  <script type="text/javascript">
+  function calculate() {
+    var check = Number(document.newP.pilot.value) + Number(document.newP.fighter.value) + Number(document.newP.trader.value) + Number(document.newP.engineer.value);
+    if (check == 16) {
+     document.newP.output.value = "You are good to go.";
+     document.getElementById("button1").disabled = false;
+    } else {
+      document.newP.output.value = "Does not add up to 16. Refresh and try again.";
+      document.getElementById("button1").disabled = true;
+    }
+  }
+</script>
+
+
+
   <center>
-    <button type="button" onclick="createPlayer()" class="btn btn-primary">Create Player</button type="button" class="btn btn-primary">
+    <button type="button" id="button1" onclick="createPlayer()" class="btn btn-primary">Create Player</button type="button" class="btn btn-primary">
   </center>
 <script src="js/new_game.js"></script>
 </body>
