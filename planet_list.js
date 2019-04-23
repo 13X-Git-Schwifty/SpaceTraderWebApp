@@ -126,25 +126,29 @@ function makeUL(array) {
     // Create the list element:
     var list = document.createElement('ul');
     var arr = new Array();
+    //Every universe will have 10 planets
 
-    for (var i = 0; i < 20; i++) {
+    for (var i = 0; i < 10; i++) {
         // Create the list item:
         var item = document.createElement('li');
-
         var x = Math.floor(Math.random() * array.length);
 
-        // Set its contents:
         item.appendChild(document.createTextNode(array[x]));
 
-        // Add it to the list:
+
         list.appendChild(item);
         arr.push(item);
     }
-
-    // Finally, return the constructed list:
     return list;
 }
 
 function onLoad() {
     document.getElementById('foo').appendChild(makeUL(arr));
+}
+
+function ssName() {
+    document.getElementById("solarSystemName").innerHTML = Math.floor(Math.random() * 100);
+    var x= (Math.random() * 360); 
+    var y = (Math.random() * -360);
+    document.getElementById("solarSystemCoordinates").innerHTML = "X coordinate: " + x.toFixed(2) + ", Y coordinate " + y.toFixed(2);
 }

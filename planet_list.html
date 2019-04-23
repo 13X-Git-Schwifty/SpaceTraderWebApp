@@ -6,19 +6,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="planet_list.js"></script>
 
 </head>
-<body onload="onLoad()">
+<body onload="onLoad(); ssName()">
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1><center> Universe created:</center></h1>
-    <h2><center> click on planet to jump to it</center></h2>
+    <h1><center> Welcome to Solar System  <span id = "solarSystemName"></span> </center> </h1>
+    <h2><center> <span id = "solarSystemCoordinates"></span></center></h2>
+    <h2><center> This solar system has the following 10 planets</center></h2>
   </div>
 </div>
-<div id = "foo" class="col-sm-10">
-</div>
+<div id = "foo" class="col-sm-10"></div>
 <center>
         <button type="button" onclick="location.href='planet.html';"class="btn btn-primary">CONTINUE</button type="button" class="btn btn-primary">
     </center>
-<script src="planet_list.js"></script>
+
 </body>
